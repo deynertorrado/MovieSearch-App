@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #e5dc25, #e98941, #ae515a, #56354c, #161616);
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    color: #e5dc25;
+}
+
+.container {
+    margin: 40px;
+    width: 70%;
+    padding: 30px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    -webkit-box-shadow: 0px 0px 70px -3px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 0px 70px -3px rgba(0,0,0,0.49);
+    box-shadow: 0px 0px 70px -3px rgba(0,0,0,0.49);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.search-container input, .search-container button {
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container input {
+    color: #c4c4c4;
+    background-color: #70707033;
+    padding: 10px;
+    border: 1px solid #e5dc25;
+    transition: 0.3s;
+}
+
+.search-container input:focus {
+    border-color: #a3a3a3;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #e5dc25;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-container button:hover {
+    transform: scale(1.05);
+    color: #e7e7e7;
+    background-color: #bdb51d;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster {
+    height: 250px;
+    margin: 25px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 70px -3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 70px -3px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 70px -3px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.poster:hover {
+    transform: scale(1.06);
+}
+
+.info div h2 {
+    font-weight: 500;
+    text-align: center;
+    color: #e7e7e7;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.info div h2:hover {
+    transform: scale(1.1);
+    color: #e5dc25;
+}
+
+.rating {
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating h4 {
+    font-size: 22px;
+}
+
+.rating img {
+    height: 20px;
+}
+
+.details {
+    color: #e7e7e7;
+    font-weight: 400;
+    text-align: center;
+}
+
+.genre {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e7e7e7;
+}
+
+h3 {
+    padding: 10px;
+    color: #e5dc25;
+    font-weight: 400;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.msg {
+    text-align: center;
+}
+
+@media screen and (min-width: 300px) {
+    .search-container {
+        flex-direction: column;
+    }
+    .search-container button {
+        margin-top: 11px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .info {
+        display: flex;
+    }
+    .rating, .details {
+        margin-left: 100px;
+        font-size: 22px;
+    }
+    .genre {
+        font-size: 22px;
+        margin-left: 114px;
+    }
+    .info div h2 {
+        margin-top: 120px;
+        margin-left: 100px;
+        font-size: 30px;
+    }
+    .poster {
+        width: 40%;
+        height: 40%;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 20px;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .rating, .details {
+        margin-left: 80px;
+        font-size: 22px;
+    }
+    .genre {
+        font-size: 22px;
+        margin-left: 91px;
+    }
+    .info div h2 {
+        margin-top: 120px;
+        margin-left: 80px;
+        font-size: 30px;
+    }
+}
